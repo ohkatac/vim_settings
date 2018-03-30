@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/takuto/workspace/media_network/processing_contest/library'
+let g:netrw_dirhist_2='/Users/takuto/workspace/docker/sassor/elp_stable/front/db/seeds'
+let g:netrw_dirhist_3='/Users/takuto/workspace/docker/sassor/sub_elp/app/octopus/config'
+let g:netrw_dirhist_4='/Users/takuto/workspace/mysql-strage'
+let g:netrw_dirhist_5='/Users/takuto/workspace/vagrant/centos_7/koken_forum/app/views'
+let g:netrw_dirhist_6='/Users/takuto/workspace/docker/sassor/leaf_fish_api/leaf_fish_api/.elasticbeanstalk'
