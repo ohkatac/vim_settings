@@ -25,8 +25,8 @@ SAVEHIST=1000
 # 1行表示
 # PROMPT="%~ %# "
 # 2行表示
-PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
-%# "
+PROMPT="%{${fg[red]}%}[%n@%m]%{${reset_color}%} %~
+%{$fg[green]%}[%D{%Y/%m/%d} %*]%{$reset_color%} %# "
 
 
 # 単語の区切り文字を指定する
@@ -84,7 +84,7 @@ setopt no_beep
 setopt no_flow_control
 
 # Ctrl+Dでzshを終了しない
-setopt ignore_eof
+# setopt ignore_eof
 
 # '#' 以降をコメントとして扱う
 setopt interactive_comments
@@ -93,7 +93,7 @@ setopt interactive_comments
 setopt auto_cd
 
 # cd したら自動的にpushdする
-setopt auto_pushd
+# setopt auto_pushd
 # 重複したディレクトリを追加しない
 setopt pushd_ignore_dups
 
@@ -197,3 +197,25 @@ case "${OSTYPE}" in
   ;;
 esac
 
+
+source ~/.proxy_settings.sh
+unset_proxy
+uec_proxy
+
+# <<< conda init <<<
+# added by Anaconda3 2018.12 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/takuto/.anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/home/takuto/.anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/takuto/.anaconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/home/takuto/.anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<
